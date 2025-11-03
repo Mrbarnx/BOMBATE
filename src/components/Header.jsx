@@ -17,6 +17,8 @@ const secondaryLinks = [
   { id: "contact", label: "Contact" }
 ];
 
+const mobileDropdownLinks = [...primaryLinks, ...secondaryLinks];
+
 function Header() {
   // Track whether the mobile-only menu is expanded
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -66,7 +68,7 @@ function Header() {
             <button
               key={section.id}
               type="button"
-              className={`${navClasses} bg-transparent`}
+              className={`${navClasses} hidden bg-transparent md:inline-flex`}
               onClick={() => handleSectionClick(section.id)}
             >
               {section.label}
@@ -91,7 +93,7 @@ function Header() {
             aria-label="Toggle navigation menu"
             aria-expanded={mobileMenuOpen}
             onClick={() => setMobileMenuOpen((open) => !open)}
-            className="inline-flex items-center justify-center rounded-full border border-slate-300 p-2 text-slate-600 transition hover:border-emerald-400 hover:text-emerald-500 md:hidden"
+            className="inline-flex items-center gap-2 rounded-full border border-slate-300 px-3 py-2 text-sm font-semibold uppercase tracking-wide text-slate-600 transition hover:border-emerald-400 hover:text-emerald-500 md:hidden"
           >
             <svg
               className="h-5 w-5"
@@ -103,6 +105,7 @@ function Header() {
             >
               <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" />
             </svg>
+            <span>MENU</span>
           </button>
         </nav>
       </div>
@@ -110,11 +113,11 @@ function Header() {
       {/* Mobile dropdown containing secondary links */}
       <div
         className={`md:hidden ${
-          mobileMenuOpen ? "max-h-32 opacity-100" : "max-h-0 opacity-0"
+          mobileMenuOpen ? "max-h-80 opacity-100" : "max-h-0 opacity-0"
         } overflow-hidden border-t border-slate-200 bg-white transition-all duration-300`}
       >
         <div className="space-y-1 px-4 py-3">
-          {secondaryLinks.map((section) => (
+          {mobileDropdownLinks.map((section) => (
             <button
               key={section.id}
               type="button"

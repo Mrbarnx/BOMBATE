@@ -54,8 +54,7 @@ const academyTracks = [
   {
     id: "academy-video",
     title: "Video Call Mastery",
-    detail:
-      "Discover how cinematic AI video calls are produced with step-by-step guidance that makes it feel like watching a movie."
+    detail: "learn how to do live video calls for your different work"
   },
   {
     id: "academy-photo",
@@ -136,9 +135,21 @@ export default function Home() {
                 Glimpse how Bombate blends photorealistic avatars with immersive storytelling for any identity.
               </p>
               <div className="mt-6 grid grid-cols-3 gap-3">
-                <div className="h-20 rounded-2xl bg-slate-700/60" />
-                <div className="h-20 rounded-2xl bg-slate-700/60" />
-                <div className="h-20 rounded-2xl bg-slate-700/60" />
+                <img
+                  src={persona1}
+                  alt="Persona 1"
+                  className="h-20 w-full rounded-2xl object-cover"
+                />
+                <img
+                  src={persona2}
+                  alt="Persona 2"
+                  className="h-20 w-full rounded-2xl object-cover"
+                />
+                <img
+                  src={persona3}
+                  alt="Persona 3"
+                  className="h-20 w-full rounded-2xl object-cover"
+                />
               </div>
             </div>
           </div>
