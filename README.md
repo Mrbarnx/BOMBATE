@@ -16,6 +16,8 @@ This project is a **single-page, responsive website** featuring:
 
 Built for speed, clarity, and conversion—ideal for startups, coaches, or service-based brands.
 
+<img width="1579" height="811" alt="image" src="https://github.com/user-attachments/assets/ef5e41cf-b38e-4a02-a03d-61b7b6ab0462" />
+
 ## ⚙️ Tech Stack
 
 - **Framework**: React 18+
@@ -31,4 +33,3 @@ This template uses [`@vitejs/plugin-react`](https://github.com/vitejs/vite-plugi
 npm install
 npm run dev
 
-<img width="1579" height="811" alt="image" src="https://github.com/user-attachments/assets/ef5e41cf-b38e-4a02-a03d-61b7b6ab0462" />
